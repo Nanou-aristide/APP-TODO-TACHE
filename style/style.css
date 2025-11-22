@@ -1,0 +1,141 @@
+/* style.css - TODO TACHE */
+:root{
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --danger: #ef4444;
+  --radius: 10px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#eef2f7);
+  color:#0f172a;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.container{
+  width:100%;
+  max-width:640px;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.08);
+}
+
+h1{
+  margin:0 0 16px;
+  font-size:1.6rem;
+  letter-spacing:0.2px;
+}
+
+.task-form{
+  display:flex;
+  gap:8px;
+  margin-bottom:12px;
+}
+
+#task-input{
+  flex:1;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid #e6edf3;
+  outline:none;
+  font-size:1rem;
+}
+
+#task-input:focus{
+  box-shadow:0 0 0 4px rgba(37,99,235,0.08);
+  border-color:var(--accent);
+}
+
+#add-btn{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:0 16px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+#add-btn:active{transform:translateY(1px)}
+
+.controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.small{
+  background:transparent;
+  border:1px solid #e6edf3;
+  padding:6px 8px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:0.85rem;
+  margin-left:8px;
+}
+
+.task-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:8px;
+}
+
+.task-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #f1f5f9;
+  background:linear-gradient(180deg,#fff,#fbfdff);
+}
+
+.task-item .text{
+  flex:1;
+  word-break:break-word;
+}
+
+.task-item .text.done{
+  text-decoration:line-through;
+  color:var(--muted);
+  opacity:0.85;
+}
+
+.icon-btn{
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  padding:6px;
+  border-radius:6px;
+}
+
+.icon-btn:hover{background:#f3f4f6}
+
+.del{
+  color:var(--danger);
+  font-weight:600;
+}
+
+.empty{
+  text-align:center;
+  color:var(--muted);
+  padding:18px;
+  border-radius:8px;
+  border:1px dashed #eef2f7;
+  background:transparent;
+}

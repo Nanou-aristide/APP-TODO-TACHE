@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TODO TACHE</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>TODO TACHE</h1>
+
+    <form id="task-form" class="task-form" aria-label="Ajouter une tâche">
+      <input id="task-input" type="text" placeholder="Ajouter une nouvelle tâche..." aria-label="Nouvelle tâche" autocomplete="off" />
+      <button type="submit" id="add-btn">Ajouter</button>
+    </form>
+
+    <section class="controls">
+      <span id="count">0 tâches</span>
+      <div>
+        <button id="clear-completed" class="small">Supprimer terminées</button>
+        <button id="clear-all" class="small">Tout supprimer</button>
+      </div>
+    </section>
+
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
